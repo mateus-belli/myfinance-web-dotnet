@@ -13,6 +13,11 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [HttpPost]
+    public IActionResult Cadastro(HomeModel model) {
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Index()
     {
         return View();
